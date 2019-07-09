@@ -2,44 +2,82 @@
 <html lang="pt-BR">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <!-- Meu CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <title>Js Exchange App</title>
   </head>
   <body class="bg-svg">
     <header>
-      <nav class="navbar navbar-light bg-dark text-white">
+      <nav class="navbar navbar-light bg-gradient text-white justify-content-center justify-content-sm-between">
         <a class="navbar-brand" href="#">
-          <img src="https://source.unsplash.com/100x100/?money" class="logo" />
+          <img src="img/exchange-logo.png" class="logo d-none d-sm-block" />
         </a>
-        <h1>Js Exchange App</h1>
+        <h1>Js Exchange <span class="text-danger">App</span></h1>
       </nav>
     </header>
-    <section>
-    	<input type="number" id="valor" value="1">
-    	<select>
-    		<option disabled selected>Selecioner uma moeda</option>
-    		<option value="USD">Dólar</option>
-    		<option value="EUR">Euro</option>
-    		<option value="NZD">Dólar da Nova Zelândia</option>
-    		<option value="GBP">Libra Esterlina</option>
-    	</select>
+    <section class="container">
+      <div class="row banner d-flex justify-content-center align-items-center">
+        <div class="col-sm-8 offset-sm-2">
+          <form class="bg-white rounded p-5">
+            <img
+              class="pb-5 d-block mx-auto py-2 logo"
+              src="img/exchange-logo.png"
+            />
+            <div>
+            <div class="form-group">
+              <input
+                class="form-control border-danger text-success"
+                type="number"
+                id="valor"
+                value="1"
+              />
+            </div>
+            <div class="form-group">
+              <select class="form-control border-danger text-success">
+                <option disabled selected>Selecioner uma moeda</option>
+                <option value="USD">Dólar</option>
+                <option value="EUR">Euro</option>
+                <option value="NZD">Dólar da Nova Zelândia</option>
+                <option value="GBP">Libra Esterlina</option>
+              </select>
+            </div>
+          </form>
+          <article class="text-center text-danger" id="resultado"></article>    
+          
+        </div>
+      </div>
     </section>
-    <section id="resultado"></section>
     <footer></footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <!-- Meu JS -->
     <script src="js/main.js"></script>
   </body>

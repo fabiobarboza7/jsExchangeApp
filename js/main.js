@@ -11,7 +11,7 @@ $(document).ready(function(){
 		$.getJSON(api, function(data){
 			let val = data.currency[0].value; 
 			let calculo = val*valor
-			resultado.html(`<p>${calculo.toFixed(2)}</p>`);
+			resultado.html(`<p>R$${calculo.toFixed(2)}</p>`);
 
 			$('#valor').val(1).focus();
 			select[0].selectedIndex = 0;
