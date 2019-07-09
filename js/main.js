@@ -1,17 +1,22 @@
 // jQuery
 $(document).ready(function(){
-	const api = 'https://currencydatafeed.com/api/data.php?token=q16wrubwfnpannjdgd1x&currency=USD/BRL';
-	const botao = $('button');
+	const select = $('select');
 	let resultado = $('#resultado');
 
-	botao.click(function(){
-		let valor = $('#valor').val();
+	select.change(function(){
+		let moeda = this.value;
+		const api = `https://currencydatafeed.com/api/data.php?token=q16wrubwfnpannjdgd1x&currency=${moeda}/BRL`;
 
+		let valor = $('#valor').val();
 		$.getJSON(api, function(data){
 			let val = data.currency[0].value; 
 			let calculo = val*valor
 			resultado.html(`<p>${calculo.toFixed(2)}</p>`);
+
+			$('#valor').val(1).focus();
+			select[0].selectedIndex = 0;
 		});
+
 	});
 
 });
